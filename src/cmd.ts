@@ -153,7 +153,7 @@ export function setUp() {
             if (options.repo || options.all) {
                 options.user = options.loggedUser
             } else {
-                options.user = process.env.GH_USER || options.remoteUser || options.loggedUser
+                options.user = options.loggedUser || process.env.GH_USER || options.remoteUser
             }
         }
 
